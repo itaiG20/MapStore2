@@ -169,6 +169,7 @@ As part of improving the authentication rules to make dynamic request configurat
 | `header` | `headers: { ... }` |
 | `browserWithCredentials` | `withCredentials: true` |
 
+<<<<<<< HEAD
 #### Data Directory Changes Required
 
 This change also requires updating the **data directory** configuration. If you are using a custom data directory, you must migrate the `authenticationRules` entries in any overridden `localConfig.json` to the new `requestsConfigurationRules` format as described above.
@@ -190,6 +191,8 @@ The CSS classes `square-button-md` and `square-button-sm` have been deprecated a
 + <Button className="square-button">Action</Button>
 ```
 
+=======
+>>>>>>> 5a7953b (Fix #11879 Add the CRS selector permission to access the quick selector and settings modal (#11948))
 ### Replace filterAllowedCRS and additionalCRS with availableProjections
 
 As part of extending the functionalities of the CRS selector, we have deprecated the use of `filterAllowedCRS` and `additionalCRS` in favor of new configuration `availableProjections`. The new configuration provides the support to add both filterAllowedCRS and additionalCRS in a single configuration. The configuration in `localConfig.json` should be updated as follow:
@@ -209,6 +212,7 @@ As part of extending the functionalities of the CRS selector, we have deprecated
 }
 ```
 
+<<<<<<< HEAD
 ### Update containerPosition for the Map and FeatureEditor plugin
 
 The `Map` and `FeatureEditor` plugins require explicit `containerPosition` configuration for proper layout placement. The `Map` plugin renders the map as a background layer, while `FeatureEditor` displays the feature grid in a bottom panel.
@@ -274,6 +278,8 @@ The `Map` and `FeatureEditor` plugins require explicit `containerPosition` confi
 | Map           | `"background"`    | Renders the map as the main background layer  |
 | FeatureEditor | `"bottom"`        | Shows the feature grid in a bottom panel      |
 
+=======
+>>>>>>> 5a7953b (Fix #11879 Add the CRS selector permission to access the quick selector and settings modal (#11948))
 ## Migration from 2025.01.01 to 2025.02.00
 
 ### Update authenticationRules in localConfig.json
