@@ -27,8 +27,9 @@ const sk = require('react-intl/locale-data/sk');
 const da = require('react-intl/locale-data/da');
 const is = require('react-intl/locale-data/is');
 const ca = require('react-intl/locale-data/ca');
+const he = require('react-intl/locale-data/he');
 
-addLocaleData([...en, ...it, ...fr, ...de, ...es, ...nl, ...zh, ...hr, ...pt, ...vi, ...fi, ...sv, ...sk, ...da, ...is, ...ca]);
+addLocaleData([...en, ...it, ...fr, ...de, ...es, ...nl, ...zh, ...hr, ...pt, ...vi, ...fi, ...sv, ...sk, ...da, ...is, ...ca, ...he]);
 
 /*
  * it, en, fr, de, es are the default locales and it is preferrable to customize them via configuration.
