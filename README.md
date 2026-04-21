@@ -141,6 +141,32 @@ Start the demo locally:
 
 The demo runs at [http://localhost:8081](http://localhost:8081) afterwards (with the Java back-end running at port `http://localhost:8080`).
 
+### 60-second hybrid DEV onboarding
+
+For a faster inner loop on frontend changes, keep backend runtime stable and run frontend with hot reload:
+
+```powershell
+# terminal 1 (backend runtime once)
+cd c:\PROJECTS\GoldGIS2
+docker compose up -d mapstore
+
+# terminal 2 (frontend hot reload)
+cd c:\PROJECTS\GoldGIS2\MapStore2
+$env:MAPSTORE_BACKEND_URL="http://localhost:8080/mapstore"
+npm run dev:hybrid
+```
+
+Fast test loop for local edits:
+
+```powershell
+cd c:\PROJECTS\GoldGIS2\MapStore2
+npm run test:watch
+# optional quick subset
+npm run test:smoke
+```
+
+See `../DEV-FAST.md` for the full team workflow and troubleshooting tips.
+
 Build the deployable war:
 
 `./build.sh [version_identifier]`

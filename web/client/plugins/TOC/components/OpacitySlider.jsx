@@ -35,25 +35,43 @@ class OpacitySlider extends React.Component {
         visibility: true
     };
 
+    isRTL() {
+        return typeof document !== 'undefined' &&
+            document.documentElement.getAttribute('dir') === 'rtl';
+    }
+
     render() {
+        const direction = this.isRTL() ? 'rtl' : 'ltr';
 
         return this.props.hide ? null : (
             <div
                 className={`mapstore-slider ${this.props.hideTooltip ? '' : 'with-tooltip'}`}
                 onClick={(e) => { e.stopPropagation(); }}>
+                {this.isRTL() && (
+                    <style dangerouslySetInnerHTML={{__html: `
+                        .mapstore-slider .noUi-target.noUi-rtl .noUi-tooltip {
+                            left: 50% !important;
+                            right: auto !important;
+                            top: auto !important;
+                            bottom: 120% !important;
+                            transform: translate(-50%, 0) !important;
+                        }
+                    `}} />
+                )}
                 {this.props.hideTooltip
                     ? <Slider
-                        key="no-tooltip"
+                        key={`no-tooltip-${direction}`}
                         disabled={this.props.disabled}
                         start={[isNil(this.props.opacity) ? 100 : Math.round(this.props.opacity * 100)]}
                         range={{min: 0, max: 100}}
+                        direction={direction}
                         onChange={(opacity) => {
                             if (isArray(opacity) && opacity[0]) {
                                 this.props.onChange(parseFloat(opacity[0].replace(' %', '') / 100));
                             }
                         }}/>
                     : <Slider
-                        key="tooltip"
+                        key={`tooltip-${direction}`}
                         disabled={this.props.disabled}
                         start={[isNil(this.props.opacity) ? 100 : Math.round(this.props.opacity * 100)]}
                         tooltips={[true]}
@@ -62,6 +80,7 @@ class OpacitySlider extends React.Component {
                             to: value => Math.round(value) + ' %'
                         }}
                         range={{min: 0, max: 100}}
+                        direction={direction}
                         onChange={(opacity) => this.props.onChange(parseFloat(opacity[0].replace(' %', '')) / 100)}/>
                 }
             </div>

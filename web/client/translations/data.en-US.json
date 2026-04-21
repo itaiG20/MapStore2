@@ -7,17 +7,17 @@
     "about_title": "About",
     "aboutTooltip": "About",
     "aboutLbl": "About",
-    "about_p0-0": "MapStore is an open-source WebGIS framework to build, manage and share maps and mashups. It can mix map content from various sources and supports multiple OGC standard formats. MapStore can be used to view, query, and integrate geospatial data, offering advanced features such as charts, dashboards, geostories as well as mapping capabilities on the web. Users can create and share resources in custom application contexts, with granular access permissions. It is both a product and a framework, licensed under Simplified BSD license, and it can work with different web mapping libraries, including OpenLayers, LeafletJS, and Cesium.",
+    "about_p0-0": "GoldGIS2 is a WebGIS platform to build, manage and share maps and geospatial resources, with support for open standards and modern mapping capabilities.",
     "about_p0-1": "and",
-    "about_p1": "For more information you can consult the <a href='https://docs.mapstore.geosolutionsgroup.com/en/latest/'>online documentation</a>.",
+    "about_p1": "For more information, refer to GoldGIS2 project documentation.",
     "about_ul0_li0": "MapViewer is a simple viewer of preconfigured maps (optionally stored in a database using GeoStore)",
     "about_ul0_li1": "MapPublisher has been developed to create, save and share in a simple and intuitive way maps and mashups created selecting contents coming from well-known sources like Google Maps and OpenStreetMap or from services provided by organizations using open protocols like OGC WMS, WFS, WMTS or TMS and so on. For more information check the",
     "about_h20": "License",
-    "about_p3": "MapStore is Free and Open Source software, it is based on OpenLayers, Leaflet and ReactJS, and is licensed under the Simplified BSD License.",
-    "about_p5-0": "For more information on how to contribute to MapStore project visit the WIKI to consult the official <a href='https://github.com/geosolutions-it/MapStore2/wiki#community-bylaws'>community bylaws</a>.",
+    "about_p3": "GoldGIS2 is built on top of open-source technologies and distributed according to the licenses of its components.",
+    "about_p5-0": "For contribution requests, please contact the GoldGIS2 team.",
     "about_p5-1": "page.",
     "about_h21": "Credits",
-    "about_p6": "MapStore is made by:",
+    "about_p6": "GoldGIS2 is developed by:",
     "enable": "Enable",
     "layers": "Layers",
     "warning": "Warning",
@@ -35,7 +35,7 @@
       "message": "The layer failed to reload with a changed name"
     },
     "version": {
-      "title": "MapStore Version",
+      "title": "GoldGIS2 Version",
       "label": "Version",
       "message": "Message",
       "commit": "Commit",
@@ -44,7 +44,7 @@
     },
     "errorPage": {
       "title": "Oops, something has gone wrong...",
-      "subtitle": "Please click the icon below to reload MapStore",
+      "subtitle": "Please click the icon below to reload GoldGIS2",
       "description": "If you want to report this error you can send an email our mailing list",
       "descriptionAdmin": "Please contact the administrator"
     },
@@ -407,9 +407,9 @@
     },
     "home": {
       "open": "Open",
-      "shortDescription": "<h1>Welcome to MapStore</h1><p>Modern webmapping with OpenLayers, Cesium, Leaflet and ReactJS.</p>",
+      "shortDescription": "<h1>Welcome to GoldGIS2</h1><p>Modern web mapping with advanced GIS capabilities.</p>",
       "forkMeOnGitHub": "Fork me on GitHub",
-      "description": "MapStore has been developed to create, save and share in a simple and intuitive way maps and mashups created selecting contents coming from well-known sources like OpenStreetMap, Google Maps or from services provided by organizations using open protocols like OGC WMS, WFS, WMTS or TMS and so on...<br/>Visit the <a href=\"https://mapstore.readthedocs.io/en/latest/\">home page</a> for more details.",
+      "description": "GoldGIS2 enables you to create, save and share maps and geospatial resources in a simple and intuitive way, integrating data from common sources and open standard services.",
       "Applications": "Applications",
       "Examples": "Examples",
       "LinkedinGroup": "Mapstore Linkedin Group",
@@ -1511,7 +1511,7 @@
       "addBboxParam": "Add bounding box param to sharing link",
       "wrongBboxParamTitle": "Invalid bounding box param",
       "wrongBboxParamMessage": "Bounding box params must be in EPSG:4326 and wrote as bbox=minx,miny,maxx,maxy",
-      "showHomeButton": "Link to MapStore home",
+      "showHomeButton": "Link to GoldGIS2 home",
       "showSectionId": "Include scroll position",
       "showConnections": "Show connections",
       "heading": "Heading",
@@ -4127,7 +4127,7 @@
       "checkbox": "don't show this message again",
       "error": "Error: target not found",
       "intro": {
-        "title": "Welcome on MapStore",
+        "title": "Welcome to GoldGIS2",
         "text": "framework to build web mapping applications using standard mapping libraries, such as OpenLayers and Leaflet."
       },
       "drawerMenu": {
@@ -4172,11 +4172,11 @@
       },
       "mapsGrid": {
         "title": "Maps",
-        "text": "Here some examples of MapStore. Click on an image to try the demo."
+        "text": "Here are some GoldGIS2 examples. Click an image to try the demo."
       },
       "examples": {
         "title": "Custom Application",
-        "text": "You can use components and plugins of MapStore to build custom applications"
+        "text": "You can use GoldGIS2 components and plugins to build custom applications"
       },
       "introCesium": {
         "title": "3D map instructions",

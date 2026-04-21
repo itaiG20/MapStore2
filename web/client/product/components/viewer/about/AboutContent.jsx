@@ -14,7 +14,7 @@ class About extends React.Component {
     render() {
         return (
             <div className="about-content-section">
-                <h1 style={{marginTop: 0}}>MapStore</h1>
+                <h1 style={{marginTop: 0}}>GoldGIS2</h1>
                 <p>
                     <I18N.Message msgId="about_p0-0"/>
                 </p>

@@ -393,13 +393,20 @@ const SearchPlugin = connect((state) => ({
     };
 
     render() {
+        const { offsets = {}, style = {} } = this.props;
+        const isRTL = document?.documentElement?.getAttribute('dir') === 'rtl';
+        const searchContainerStyle = {
+            ...style,
+            ...(isRTL && offsets.left !== undefined ? { left: offsets.left } : {}),
+            ...(offsets.right !== undefined ? { right: offsets.right } : {})
+        };
         return (<span
             id="search-bar-container"
             className={classnames({
                 'toggled': !this.searchFitToTheScreen(),
                 'no-sidebar': !this.props.sidebarIsActive
             })}
-            style={ this.props.sidebarIsActive ? this.props.style : null}>
+            style={searchContainerStyle}>
             {this.getSearchAndToggleButton()}
             <SearchResultList
                 fitToMapSize={this.props.fitResultsToMapSize}

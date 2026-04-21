@@ -1,4 +1,5 @@
 {
+  "locale": "en-US",
   "proxyUrl": {
     "url": "proxy/?url=",
     "useCORS": [
@@ -24,7 +25,7 @@
     ]
   },
   "geoStoreUrl": "rest/geostore/",
-  "mailingList": "https://groups.google.com/forum/#!forum/mapstore-users",
+  "mailingList": "",
   "printUrl": "pdf/info.json",
   "mapquestApiKey": "__API_KEY_MAPQUEST__",
   "mapboxAccessToken": "__ACCESS_TOKEN_MAPBOX__",
@@ -88,6 +89,11 @@
   "projectionDefs": [],
   "initialState": {
     "defaultState": {
+      "theme": {
+        "selectedTheme": {
+          "id": "goldskin"
+        }
+      },
       "catalog": {
         "default": {
           "newService": {
@@ -260,13 +266,25 @@
       },
       "locales": {
         "supportedLocales": {
-          "it": {
-            "code": "it-IT",
-            "description": "Italiano"
-          },
           "en": {
             "code": "en-US",
             "description": "English"
+          },
+          "pt-BR": {
+            "code": "pt-BR",
+            "description": "Português (Brasil)"
+          },
+          "pt": {
+            "code": "pt-PT",
+            "description": "Português"
+          },
+          "he": {
+            "code": "he-IL",
+            "description": "עברית"
+          },
+          "it": {
+            "code": "it-IT",
+            "description": "Italiano"
           },
           "fr": {
             "code": "fr-FR",
@@ -303,7 +321,7 @@
       {
         "name": "About",
         "cfg": {
-          "githubUrl": "https://github.com/geosolutions-it/MapStore2/tree/"
+          "githubUrl": ""
         }
       },
       "DrawerMenu",
@@ -574,7 +592,7 @@
       {
         "name": "About",
         "cfg": {
-          "githubUrl": "https://github.com/geosolutions-it/MapStore2/tree/"
+          "githubUrl": ""
         }
       },
       {
@@ -994,7 +1012,7 @@
       {
         "name": "About",
         "cfg": {
-          "githubUrl": "https://github.com/geosolutions-it/MapStore2/tree/"
+          "githubUrl": ""
         }
       },
       "Language",
@@ -1174,7 +1192,7 @@
       {
         "name": "About",
         "cfg": {
-          "githubUrl": "https://github.com/geosolutions-it/MapStore2/tree/"
+          "githubUrl": ""
         }
       },
       "Language",

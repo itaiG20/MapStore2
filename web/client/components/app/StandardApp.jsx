@@ -30,7 +30,7 @@ import isArray from 'lodash/isArray';
 const DefaultAppLoaderComponent = () => (
     <span>
         <div className="_ms2_init_spinner _ms2_init_center"><div></div></div>
-        <div className="_ms2_init_text _ms2_init_center">Loading MapStore</div>
+        <div className="_ms2_init_text _ms2_init_center">Loading GoldGIS2</div>
     </span>
 );
 

@@ -260,6 +260,7 @@
     "vis": "4.21.0",
     "web-ifc": "0.0.50",
     "webfontloader": "1.6.28",
+    "websocket-driver": "^0.7.4",
     "wellknown": "0.5.0",
     "xml2js": "0.6.2",
     "xpath": "0.0.27"
@@ -267,6 +268,9 @@
   "scripts": {
     "start": "npm run app:start",
     "app:start": "concurrently -n frontend,backend -c green,blue \"npm:fe:start\" \"npm:be:start\"",
+    "dev:fe": "npm run fe:start",
+    "dev:be": "npm run be:start",
+    "dev:hybrid": "node ./utility/dev/start-hybrid.js",
     "fe:start": "webpack serve --progress --color --port 8081 --hot --inline --config build/webpack.config.js --content-base web/client",
     "fe:start-prod": "webpack serve --progress --color --port 8081 --hot --inline --config build/prod-webpack.config.js --content-base web/client",
     "fe:build": "npm run clean && mkdirp ./web/client/dist && webpack build --progress --color --config build/prod-webpack.config.js",
@@ -275,6 +279,7 @@
     "be:start": "npm run be:build && mvn cargo:run -f ./product/pom.xml",
     "pretest": "npm run jsdoc:clean && npm run lint",
     "test": "karma start ./build/karma.conf.single-run.js --color",
+    "test:smoke": "karma start ./build/karma.conf.smoke.js --color",
     "test:watch": "karma start ./build/karma.conf.continuous-test.js --color",
     "continuoustest": "npm run test:watch",
     "doc": "npm run jsdoc:build",

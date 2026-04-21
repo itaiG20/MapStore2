@@ -47,17 +47,21 @@ class Menu extends React.Component {
 
     componentDidMount() {
         if (!this.props.overlapMap && this.props.show) {
-            let style = {left: this.props.width, width: `calc(100% - ${this.props.width}px)`};
+            const edge = this.getDockEdge();
+            let style = {[edge]: this.props.width, width: `calc(100% - ${this.props.width}px)`};
             this.props.changeMapStyle(style, "drawerMenu");
         }
     }
 
     componentDidUpdate(prevProps) {
         if (!this.props.overlapMap && prevProps.show !== this.props.show) {
-            let style = this.props.show ? {left: this.props.width, width: `calc(100% - ${this.props.width}px)`} : {};
+            const edge = this.getDockEdge();
+            let style = this.props.show ? {[edge]: this.props.width, width: `calc(100% - ${this.props.width}px)`} : {};
             this.props.changeMapStyle(style, "drawerMenu");
         }
     }
+
+    getDockEdge = () => this.props.alignment === 'right' ? 'right' : 'left';
 
     getWidth = () => {
         return this.props.dynamicWidth || this.props.width;
@@ -113,7 +117,7 @@ class Menu extends React.Component {
                 {this.props.children.filter((child) => !this.props.single || this.props.activeKey === child.props.eventKey).map(this.renderChildren)}
             </div>
         </div>);
-        return this.props.resizable ? <Resizable axis="x" resizeHandles={['e']} width={this.getWidth()} onResize={this.resize}>{content}</Resizable> : content;
+        return this.props.resizable ? <Resizable axis="x" resizeHandles={[this.getDockEdge() === 'right' ? 'w' : 'e']} width={this.getWidth()} onResize={this.resize}>{content}</Resizable> : content;
     };
 
     render() {
@@ -128,7 +132,8 @@ class Menu extends React.Component {
                     zIndex: 1021
                 },
                 root: {
-                    right: this.props.show ? 0 : 'auto',
+                    left: this.getDockEdge() === 'right' ? 'auto' : 0,
+                    right: this.getDockEdge() === 'right' ? 0 : 'auto',
                     width: '0',
                     overflow: 'visible'
                 },
@@ -137,7 +142,8 @@ class Menu extends React.Component {
                 }
             }} sidebarClassName="nav-menu" onSetOpen={() => {
                 this.props.onToggle();
-            }} open={this.props.show} docked={this.props.docked} sidebar={this.renderContent()}>
+            }} open={this.props.show} docked={this.props.docked}
+            sidebar={this.renderContent()}>
                 <div />
             </Sidebar>
         );
